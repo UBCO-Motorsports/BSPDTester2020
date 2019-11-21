@@ -1,0 +1,387 @@
+EESchema Schematic File Version 4
+LIBS:Junction Tester-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x06_Counter_Clockwise J1
+U 1 1 5DC19241
+P 3000 3700
+F 0 "J1" H 3050 4117 50  0000 C CNN
+F 1 "Conn_02x06_Counter_Clockwise" H 3050 4026 50  0000 C CNN
+F 2 "Lukas_Library:MX120G" H 3000 3700 50  0001 C CNN
+F 3 "~" H 3000 3700 50  0001 C CNN
+	1    3000 3700
+	1    0    0    -1  
+$EndComp
+Text GLabel 2800 3500 0    50   Input ~ 0
+SENS1
+Text GLabel 2800 3600 0    50   Input ~ 0
+SENS2
+$Comp
+L power:GND #PWR02
+U 1 1 5DCB8050
+P 2800 4000
+F 0 "#PWR02" H 2800 3750 50  0001 C CNN
+F 1 "GND" V 2805 3872 50  0000 R CNN
+F 2 "" H 2800 4000 50  0001 C CNN
+F 3 "" H 2800 4000 50  0001 C CNN
+	1    2800 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x06_Counter_Clockwise J2
+U 1 1 5DCB845A
+P 7100 3750
+F 0 "J2" H 7150 4167 50  0000 C CNN
+F 1 "Conn_02x06_Counter_Clockwise" H 7150 4076 50  0000 C CNN
+F 2 "Lukas_Library:MX120G" H 7100 3750 50  0001 C CNN
+F 3 "~" H 7100 3750 50  0001 C CNN
+	1    7100 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Regulator_Linear:NCP1117-1.5_SOT223 U3
+U 1 1 5DCBBDE6
+P 4900 3600
+F 0 "U3" H 4900 3842 50  0000 C CNN
+F 1 "NCP1117-1.5_SOT223" H 4900 3751 50  0000 C CNN
+F 2 "digikey-footprints:SOT-223-4" H 4900 3800 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF" H 5000 3350 50  0001 C CNN
+	1    4900 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5DCBE6FE
+P 4550 3800
+F 0 "C2" H 4642 3846 50  0000 L CNN
+F 1 "10n" H 4642 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4550 3800 50  0001 C CNN
+F 3 "~" H 4550 3800 50  0001 C CNN
+	1    4550 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5DCBEEBA
+P 4250 3800
+F 0 "C1" H 4368 3846 50  0000 L CNN
+F 1 "10u" H 4368 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 4288 3650 50  0001 C CNN
+F 3 "~" H 4250 3800 50  0001 C CNN
+	1    4250 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3600 4250 3650
+Wire Wire Line
+	4550 3600 4550 3700
+Wire Wire Line
+	4250 3950 4550 3950
+Wire Wire Line
+	4550 3900 4550 3950
+Connection ~ 4550 3950
+$Comp
+L Device:C_Small C3
+U 1 1 5DCC0BF2
+P 5250 3800
+F 0 "C3" H 5342 3846 50  0000 L CNN
+F 1 "10n" H 5342 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5250 3800 50  0001 C CNN
+F 3 "~" H 5250 3800 50  0001 C CNN
+	1    5250 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C4
+U 1 1 5DCC1234
+P 5600 3800
+F 0 "C4" H 5718 3846 50  0000 L CNN
+F 1 "10u" H 5718 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.4" H 5638 3650 50  0001 C CNN
+F 3 "~" H 5600 3800 50  0001 C CNN
+	1    5600 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3600 5250 3600
+Wire Wire Line
+	5600 3600 5600 3650
+Wire Wire Line
+	5600 3950 5250 3950
+Wire Wire Line
+	5250 3900 5250 3950
+Connection ~ 5250 3950
+Wire Wire Line
+	5250 3700 5250 3600
+Connection ~ 5250 3600
+Wire Wire Line
+	5250 3600 5600 3600
+$Comp
+L power:+5V #PWR08
+U 1 1 5DCC268C
+P 5600 3400
+F 0 "#PWR08" H 5600 3250 50  0001 C CNN
+F 1 "+5V" H 5615 3573 50  0000 C CNN
+F 2 "" H 5600 3400 50  0001 C CNN
+F 3 "" H 5600 3400 50  0001 C CNN
+	1    5600 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR05
+U 1 1 5DCC316F
+P 4250 3600
+F 0 "#PWR05" H 4250 3450 50  0001 C CNN
+F 1 "+12V" H 4265 3773 50  0000 C CNN
+F 2 "" H 4250 3600 50  0001 C CNN
+F 3 "" H 4250 3600 50  0001 C CNN
+	1    4250 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3600 5600 3400
+Connection ~ 5600 3600
+$Comp
+L power:GND #PWR09
+U 1 1 5DCC8AA6
+P 7300 3450
+F 0 "#PWR09" H 7300 3200 50  0001 C CNN
+F 1 "GND" V 7305 3322 50  0000 R CNN
+F 2 "" H 7300 3450 50  0001 C CNN
+F 3 "" H 7300 3450 50  0001 C CNN
+	1    7300 3450
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7300 3950 2    50   Input ~ 0
+PIN1
+Text GLabel 7300 3850 2    50   Input ~ 0
+PIN2
+NoConn ~ 7300 3750
+NoConn ~ 7300 3650
+NoConn ~ 6800 3450
+NoConn ~ 6800 3550
+NoConn ~ 6800 3650
+NoConn ~ 6800 3750
+NoConn ~ 6800 3850
+NoConn ~ 6800 3950
+NoConn ~ 3300 3500
+NoConn ~ 3300 3600
+NoConn ~ 3300 3700
+NoConn ~ 3300 3800
+NoConn ~ 3300 3900
+NoConn ~ 3300 4000
+NoConn ~ 2800 3800
+NoConn ~ 2800 3700
+Text GLabel 4200 1500 1    50   Input ~ 0
+PIN1
+Text GLabel 5700 1500 1    50   Input ~ 0
+PIN2
+$Comp
+L power:+12V #PWR010
+U 1 1 5DCC6AC2
+P 7300 3550
+F 0 "#PWR010" H 7300 3400 50  0001 C CNN
+F 1 "+12V" V 7315 3678 50  0000 L CNN
+F 2 "" H 7300 3550 50  0001 C CNN
+F 3 "" H 7300 3550 50  0001 C CNN
+	1    7300 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+12V #PWR01
+U 1 1 5DCB771F
+P 1850 3900
+F 0 "#PWR01" H 1850 3750 50  0001 C CNN
+F 1 "+12V" V 1865 4028 50  0000 L CNN
+F 2 "" H 1850 3900 50  0001 C CNN
+F 3 "" H 1850 3900 50  0001 C CNN
+	1    1850 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5DCD70F7
+P 4600 2450
+F 0 "#PWR04" H 4600 2200 50  0001 C CNN
+F 1 "GND" V 4605 2322 50  0000 R CNN
+F 2 "" H 4600 2450 50  0001 C CNN
+F 3 "" H 4600 2450 50  0001 C CNN
+	1    4600 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5DCCA418
+P 4450 2600
+F 0 "#PWR03" H 4450 2450 50  0001 C CNN
+F 1 "+5V" H 4465 2773 50  0000 C CNN
+F 2 "" H 4450 2600 50  0001 C CNN
+F 3 "" H 4450 2600 50  0001 C CNN
+	1    4450 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5DCC8E61
+P 4450 2450
+F 0 "RV1" H 4381 2496 50  0000 R CNN
+F 1 "R_POT" H 4381 2405 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 4450 2450 50  0001 C CNN
+F 3 "~" H 4450 2450 50  0001 C CNN
+	1    4450 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5DCDCCDD
+P 5600 2450
+F 0 "#PWR07" H 5600 2200 50  0001 C CNN
+F 1 "GND" V 5605 2322 50  0000 R CNN
+F 2 "" H 5600 2450 50  0001 C CNN
+F 3 "" H 5600 2450 50  0001 C CNN
+	1    5600 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 5DCCAB3C
+P 5450 2600
+F 0 "#PWR06" H 5450 2450 50  0001 C CNN
+F 1 "+5V" H 5465 2773 50  0000 C CNN
+F 2 "" H 5450 2600 50  0001 C CNN
+F 3 "" H 5450 2600 50  0001 C CNN
+	1    5450 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT RV2
+U 1 1 5DCC95A8
+P 5450 2450
+F 0 "RV2" H 5381 2496 50  0000 R CNN
+F 1 "R_POT" H 5381 2405 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 5450 2450 50  0001 C CNN
+F 3 "~" H 5450 2450 50  0001 C CNN
+	1    5450 2450
+	1    0    0    -1  
+$EndComp
+Text GLabel 3900 2350 3    50   Input ~ 0
+SENS1
+Text GLabel 5950 2350 3    50   Input ~ 0
+SENS2
+Wire Wire Line
+	4550 3950 4900 3950
+Connection ~ 4900 3950
+Wire Wire Line
+	4900 3950 5250 3950
+Wire Wire Line
+	4900 3900 4900 3950
+Wire Wire Line
+	4250 3600 4550 3600
+Connection ~ 4250 3600
+Wire Wire Line
+	4600 3600 4550 3600
+Connection ~ 4550 3600
+Wire Wire Line
+	3900 2350 3900 2250
+Wire Wire Line
+	5950 2350 5950 2250
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5DCFF5E5
+P 3700 2150
+F 0 "J3" H 3808 2331 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 3808 2240 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3700 2150 50  0001 C CNN
+F 3 "~" H 3700 2150 50  0001 C CNN
+	1    3700 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5DCFFC2A
+P 6150 2250
+F 0 "J4" H 6122 2132 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 6122 2223 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6150 2250 50  0001 C CNN
+F 3 "~" H 6150 2250 50  0001 C CNN
+	1    6150 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J5
+U 1 1 5DCFD047
+P 2250 4100
+F 0 "J5" H 2358 4281 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 2358 4190 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2250 4100 50  0001 C CNN
+F 3 "~" H 2250 4100 50  0001 C CNN
+	1    2250 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1850 3900 2250 3900
+Wire Wire Line
+	2350 3900 2800 3900
+$Comp
+L Analog_SwitchM:3PoleSwitch U1
+U 1 1 5DD108CC
+P 4200 1750
+F 0 "U1" V 4154 1938 50  0000 L CNN
+F 1 "3PoleSwitch" V 4245 1938 50  0000 L CNN
+F 2 "Lukas_Library:OS102011MS2QN1" H 4200 2100 50  0001 C CNN
+F 3 "" H 4200 2100 50  0001 C CNN
+	1    4200 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Analog_SwitchM:3PoleSwitch U2
+U 1 1 5DD12717
+P 5700 1750
+F 0 "U2" V 5654 1938 50  0000 L CNN
+F 1 "3PoleSwitch" V 5745 1938 50  0000 L CNN
+F 2 "Lukas_Library:OS102011MS2QN1" H 5700 2100 50  0001 C CNN
+F 3 "" H 5700 2100 50  0001 C CNN
+	1    5700 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5950 2000 5800 2000
+Wire Wire Line
+	5950 2000 5950 2150
+Wire Wire Line
+	5450 2000 5600 2000
+Wire Wire Line
+	5450 2000 5450 2300
+Wire Wire Line
+	4450 2000 4300 2000
+Wire Wire Line
+	4450 2000 4450 2300
+Wire Wire Line
+	3900 2000 4100 2000
+Wire Wire Line
+	3900 2000 3900 2150
+$Comp
+L power:GND #PWR?
+U 1 1 5DD2DE68
+P 4900 3950
+F 0 "#PWR?" H 4900 3700 50  0001 C CNN
+F 1 "GND" V 4905 3822 50  0000 R CNN
+F 2 "" H 4900 3950 50  0001 C CNN
+F 3 "" H 4900 3950 50  0001 C CNN
+	1    4900 3950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
